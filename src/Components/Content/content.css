@@ -1,0 +1,34 @@
+.content-container {
+  background-color: white;
+  width: 93vw;
+  height: 71vh;
+  padding: 2rem;
+  margin-top: -40px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow-x: scroll;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-search {
+  border: 1px solid gray;
+}
+
+#content-input {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  width: 100%;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .content-container {
+    margin-top: -10px;
+  }
+}

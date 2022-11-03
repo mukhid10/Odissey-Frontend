@@ -1,0 +1,45 @@
+.header-container {
+  width: 100vw;
+  min-height: 35vh;
+  background-color: blue;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.box-header-content {
+  width: 300px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 12px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-header-content span p {
+  width: auto;
+}
+
+.box-header-content span p {
+  margin: 0;
+}
+
+.wrapper-icon-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
