@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import * as XLSX from "xlsx";
 
 import "./content.css";
 
@@ -106,10 +107,25 @@ function Content() {
     dispatch(getDeathsTotal(rest));
   };
 
+  const handleExportExcel = () => {
+    let wb = XLSX.utils.book_new(),
+      ws = XLSX.utils.json_to_sheet(dataTable);
+
+    XLSX.utils.book_append_sheet(wb, ws, "MySheet1");
+
+    XLSX.writeFile(wb, "MyExcel.xlsx");
+  };
+
   return (
     <div className="content-container">
       <div className="content-header">
         <h4 className="text-secondary">Statistic</h4>
+        <button
+          onClick={handleExportExcel}
+          className="px-2 py-1 text-white fw-bold bg-primary"
+        >
+          Export Excel
+        </button>
         <span className="d-flex align-items-center list-search bg-light rounded-3 p-1 ">
           <BsSearch color="gray" fontSize="20px" />
           <AutoComplete
